@@ -4,14 +4,9 @@
 		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
 
-	<http auto-config="true"> <!-- auto-config="true" -->
+	<http>
 
 		<intercept-url pattern="/admin/**" access="IS_AUTHENTICATED_FULLY" />
-
-		<!-- <form-login /> -->
-		<!-- <form-login login-page="/login.html" /> -->
-		<!-- <form-login login-page="/login.html" authentication-failure-url="/login.html?error=true" /> -->
-		<form-login login-page="/login.html" authentication-failure-url="/login.html?error=true" default-target-url="/index.html" />
 
 	</http>
 
