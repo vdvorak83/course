@@ -29,7 +29,7 @@
             <li class="active"><a href="<spring:url value="/"/>"><strong><spring:message code="home.goto" /></strong></a></li>
           </ul>
           <ul class="nav pull-right">
-            <li><a id="anonymous.loginLink" href="<spring:url value="/login.html"/>"><strong><spring:message code="ui.login" /></strong></a></li>
+            <li><a href="<spring:url value="/login.html"/>"><strong><spring:message code="ui.login" /></strong></a></li>
           </ul>
         </div>
       </div>

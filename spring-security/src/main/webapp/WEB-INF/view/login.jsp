@@ -25,7 +25,7 @@
             <li><a href="<spring:url value="/"/>"><strong><spring:message code="home.goto" /></strong></a></li>
           </ul>
           <ul class="nav pull-right">
-            <li class="active"><a id="anonymous.loginLink" href="<spring:url value="/login.html"/>"><strong><spring:message code="ui.login" /></strong></a></li>
+            <li class="active"><a href="<spring:url value="/login.html"/>"><strong><spring:message code="ui.login" /></strong></a></li>
           </ul>
         </div>
       </div>
@@ -34,7 +34,7 @@
 
   <div class="container">
 
-    <form id="loginForm" name="loginForm" action="j_spring_security_check" method="post" class="form-horizontal">
+    <form name="loginForm" action="j_spring_security_check" method="post" class="form-horizontal">
       <fieldset>
         <legend>Please Login</legend>
         <br />
@@ -42,19 +42,19 @@
         <div class="control-group">
           <label class="control-label" for="login_email"><spring:message code="login.username" /></label>
           <div class="controls">
-            <input id="login_email" type="text" name="j_username" autofocus="autofocus" class="required" />
+            <input type="text" name="j_username" autofocus="autofocus" class="required" />
           </div>
         </div>
 
         <div class="control-group">
           <label class="control-label" for="login_password"><spring:message code="login.password" /></label>
           <div class="controls">
-            <input id="login_password" type="password" name="j_password" class="required" />
+            <input type="password" name="j_password" class="required" />
           </div>
         </div>
 
         <div class="form-actions">
-          <input id="login_loginBtn" type="submit" class="btn btn-primary" value="Login" />
+          <input type="submit" class="btn btn-primary" value="Login" />
         </div>
 
       </fieldset>
