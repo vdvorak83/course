@@ -7,7 +7,7 @@
 	<http use-expressions="true">
 
 		<intercept-url pattern="/authenticated.html" access="hasRole('ROLE_USER')" />
-		<intercept-url pattern="/admin/dev_only.html" access="isFullyAuthenticated() and principal.username=='admin1'" />
+		<intercept-url pattern="/admin/dev_only.html" access="isFullyAuthenticated() and principal.username=='admin2'" />
 		<intercept-url pattern="/admin/**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_NEW')" />
 
 		<form-login login-page="/login.html" default-target-url="/authenticated.html" />
