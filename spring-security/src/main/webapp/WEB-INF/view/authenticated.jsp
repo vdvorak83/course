@@ -35,7 +35,9 @@
       </div>
     </div>
   </div>
-  <div class="container">Logged In</div>
+  <div class="container">
+    Logged In <br /> <a href="admin/users.html">Go To Users Admin</a>
+  </div>
 
 </body>
 </html>
