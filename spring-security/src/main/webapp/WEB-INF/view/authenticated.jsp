@@ -2,7 +2,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
 <head>
-<title>Index Page</title>
+<title>Authenticated Page</title>
 <meta charset="UTF-8">
 
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/latest/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />

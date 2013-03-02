@@ -5,10 +5,9 @@
 <title><spring:message code="admin.console" /></title>
 <meta charset="UTF-8">
 
-<!-- CSS -->
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/latest/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
 <link href="<spring:url value="/css/styles.css"/>" rel="stylesheet" type="text/css" />
 <link href="//ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/latest/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
 
 <!-- JS -->
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -16,10 +15,12 @@
 <script type="text/javascript" src="//netdna.bootstrapcdn.com/twitter-bootstrap/latest/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<spring:url value="/js/jquery.json-2.4.js"/>"></script>
 <script type="text/javascript" src="<spring:url value="/js/jquery.blockUI.js"/>"></script>
+<!-- ?needed? -->
 <script type="text/javascript" src="<spring:url value="/js/mustache.js"/>"></script>
 
 <script type="text/javascript" src="<spring:url value="/js/internal/ajaxHandler.js"/>"></script>
 <script type="text/javascript" src="<spring:url value="/js/internal/common.js"/>"></script>
+
 <script type="text/javascript" src="<spring:url value="/js/api/user.api.js"/>"></script>
 <script type="text/javascript" src="<spring:url value="/js/admin/admin.js"/>"></script>
 
@@ -35,6 +36,7 @@
 	adminNotFoundMsg = '<spring:message code="admin.js.users.notFound"/>';
 	adminEnterEmailMsg = '<spring:message code="admin.js.users.promptEmail"/>';
 </script>
+
 <%@include file="../includes/common.jsp"%>
 </head>
 
@@ -47,11 +49,10 @@
         </a>
         <div class="nav-collapse">
           <ul class="nav pull-left">
-            <li class="active"><a href="<spring:url value="/index.html"/>"><spring:message code="admin.home" /></a></li>
+            <li class="active"><a href="<spring:url value="/"/>"><strong><spring:message code="home.goto" /></strong></a></li>
           </ul>
           <ul class="nav pull-right">
-            <%-- <li><a id="userLoggedIn"><spring:message code="logged.in.as" /><b>${requestScope.username}</b></a></li> --%>
-            <%-- <%@include file="../_logout.jsp"%> --%>
+            <li><a href="<spring:url value="/j_spring_security_logout"/>"><strong><spring:message code="ui.logout" /></strong></a></li>
           </ul>
         </div>
       </div>
@@ -75,10 +76,6 @@
         <span id="currentPage">1</span>
       </div>
 
-      <ul class="pager">
-        <li class="disabled previous"><a id="prevPage" href="javascript:void(0);">&larr; <spring:message code="ui.prev" /></a></li>
-        <li class="next"><a id="nextPage" href="javascript:void(0);"><spring:message code="ui.next" /> &rarr;</a></li>
-      </ul>
     </div>
   </div>
 
