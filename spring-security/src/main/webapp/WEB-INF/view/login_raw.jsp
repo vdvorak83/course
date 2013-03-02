@@ -34,30 +34,22 @@
 
   <div class="container">
 
-    <form id="loginForm" name="loginForm" action="j_spring_security_check" method="post" class="form-horizontal">
-      <fieldset>
-        <legend>Please Login</legend>
-        <br />
+    <form name='f' action="<c:url value='j_spring_security_check' />" method='POST'>
 
-        <div class="control-group">
-          <label class="control-label" for="login_email"><spring:message code="login.username" /></label>
-          <div class="controls">
-            <input id="login_email" type="text" name="j_username" autofocus="autofocus" class="required" />
-          </div>
-        </div>
+      <table>
+        <tr>
+          <td>User:</td>
+          <td><input type='text' name='j_username' value=''></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><input type='password' name='j_password' /></td>
+        </tr>
+        <tr>
+          <td><input name="submit" type="submit" value="submit" /></td>
+        </tr>
+      </table>
 
-        <div class="control-group">
-          <label class="control-label" for="login_password"><spring:message code="login.password" /></label>
-          <div class="controls">
-            <input id="login_password" type="password" name="j_password" class="required" />
-          </div>
-        </div>
-
-        <div class="form-actions">
-          <input id="login_loginBtn" type="submit" class="btn btn-primary" value="Login" />
-        </div>
-
-      </fieldset>
     </form>
 
   </div>
