@@ -17,7 +17,7 @@
 <script type="text/javascript" src="<spring:url value="/js/internal/ajaxHandler.js"/>"></script>
 <script type="text/javascript" src="<spring:url value="/js/internal/common.js"/>"></script>
 
-<%@include file="includes/common.jsp"%>
+<%@include file="../includes/common.jsp"%>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
       <div class="container">
         <div class="nav-collapse">
           <ul class="nav pull-left">
-            <li class="active"><a href="<spring:url value="/authenticated.html"/>"><strong><spring:message code="home.goto" /></strong></a></li>
+            <li><a href="<spring:url value="/authenticated.html"/>"><strong><spring:message code="home.goto" /></strong></a></li>
           </ul>
           <ul class="nav pull-right">
             <li><a href="<spring:url value="/j_spring_security_logout"/>"><strong><spring:message code="ui.logout" /></strong></a></li>
@@ -36,7 +36,7 @@
     </div>
   </div>
   <div class="container">
-    Logged In <br /> <a href="admin/users.html">Go To Users Admin</a> <br /> <a href="admin/dev_only.html">Go To Super Secure Dev Only Page</a>
+    Super Secure, Dev Only page<br />
   </div>
 
 </body>

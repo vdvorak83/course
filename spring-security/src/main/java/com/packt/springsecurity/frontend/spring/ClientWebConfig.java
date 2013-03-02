@@ -30,6 +30,7 @@ public class ClientWebConfig extends WebMvcConfigurerAdapter {
         registry.addViewController("/authenticated.html");
 
         registry.addViewController("/admin/users.html");
+        registry.addViewController("/admin/dev_only.html");
     }
 
     /**
