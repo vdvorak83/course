@@ -49,7 +49,7 @@
         </a>
         <div class="nav-collapse">
           <ul class="nav pull-left">
-            <li class="active"><a href="<spring:url value="/"/>"><strong><spring:message code="home.goto" /></strong></a></li>
+            <li><a href="<spring:url value="/authenticated.html"/>"><strong><spring:message code="home.goto" /></strong></a></li>
           </ul>
           <ul class="nav pull-right">
             <li><a href="<spring:url value="/j_spring_security_logout"/>"><strong><spring:message code="ui.logout" /></strong></a></li>

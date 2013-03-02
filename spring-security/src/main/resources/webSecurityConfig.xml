@@ -6,8 +6,9 @@
 
 	<http>
 
+		<intercept-url pattern="/authenticated.html" access="ROLE_USER" />
 		<intercept-url pattern="/admin/**" access="ROLE_ADMIN" />
-		
+
 		<form-login login-page="/login.html" default-target-url="/authenticated.html" />
 		<logout />
 
@@ -17,7 +18,7 @@
 		<authentication-provider>
 			<user-service>
 				<user name="user1" password="user1Pass" authorities="ROLE_USER" />
-				<user name="admin1" password="admin1Pass" authorities="ROLE_ADMIN" />
+				<user name="admin1" password="admin1Pass" authorities="ROLE_ADMIN,ROLE_USER" />
 			</user-service>
 		</authentication-provider>
 	</authentication-manager>
