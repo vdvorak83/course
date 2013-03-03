@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <html>
 <head>
 <title>Authenticated Page</title>
@@ -36,7 +37,13 @@
     </div>
   </div>
   <div class="container">
-    Logged In <br /> <a href="admin/users.html">Go To Users Admin</a> <br /> <a href="admin/dev_only.html">Go To Super Secure Dev Only Page</a>
+    Logged In <br />
+    <sec:authorize access="hasAnyRole('ROLE_ADMIN', 'ROLE_NEW')">
+      <a href="admin/users.html">Go To Users Admin</a>
+      <br />
+    </sec:authorize>
+
+    <a href="admin/dev_only.html">Go To Super Secure Dev Only Page</a>
   </div>
 
 </body>
