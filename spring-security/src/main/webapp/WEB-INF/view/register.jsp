@@ -2,7 +2,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
 <head>
-<title>Login Page</title>
+<title>Register Page</title>
 <meta charset="UTF-8">
 
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/latest/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
@@ -11,13 +11,13 @@
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="//netdna.bootstrapcdn.com/twitter-bootstrap/latest/js/bootstrap.min.js"></script>
 
+<script type="text/javascript" src="<spring:url value="/js/internal/ajaxHandler.js"/>"></script>
 <script type="text/javascript" src="<spring:url value="/js/internal/common.js"/>"></script>
 
 <%@include file="includes/common.jsp"%>
 </head>
-
 <body>
-
+  
   <div class="navbar">
     <div class="navbar-inner">
       <div class="container">
@@ -34,30 +34,41 @@
   </div>
 
   <div class="container">
-
-    <form name="loginForm" action="j_spring_security_check" method="post" class="form-horizontal">
+    <form id="registerForm" name="registerForm" action="" method="post" class="form-horizontal">
       <fieldset>
-        <legend>Please Login</legend>
-        <br />
+        <legend>Register</legend>
 
         <div class="control-group">
-          <label class="control-label" for="login_email"><spring:message code="login.username" /></label>
+          <label class="control-label" for="registration_email"><spring:message code="account.email" /></label>
           <div class="controls">
-            <input type="text" name="j_username" autofocus="autofocus" class="required" />
+            <input id="registration_email" type="email" name="email" class="required email" />
           </div>
         </div>
 
         <div class="control-group">
-          <label class="control-label" for="login_password"><spring:message code="login.password" /></label>
+          <label class="control-label" for="registration_name"><spring:message code="account.name" /></label>
           <div class="controls">
-            <input type="password" name="j_password" class="required" />
+            <input id="registration_name" type="name" name="name" class="required" />
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="registration_password"><spring:message code="account.password" /></label>
+          <div class="controls">
+            <input id="registration_password" type="password" name="password" class="required" />
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="registration_password2"><spring:message code="account.password.confirm" /></label>
+          <div class="controls">
+            <input id="registration_password2" type="password" name="registration_password2" class="required" />
           </div>
         </div>
 
         <div class="form-actions">
-          <input type="submit" class="btn btn-primary" value="Login" />
+          <input id="registration_register" type="submit" class="btn btn-primary" value="<spring:message code="account.register"/>" />
         </div>
-
       </fieldset>
     </form>
 
