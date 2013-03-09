@@ -30,6 +30,7 @@
           </ul>
           <ul class="nav pull-right">
             <li><a href="<spring:url value="/login.html"/>"><strong><spring:message code="ui.login" /></strong></a></li>
+            <li><a href="<spring:url value="/register.html"/>"><strong><spring:message code="ui.register" /></strong></a></li>
           </ul>
         </div>
       </div>
