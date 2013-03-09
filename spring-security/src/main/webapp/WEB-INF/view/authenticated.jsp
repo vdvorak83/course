@@ -9,7 +9,7 @@
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/latest/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
 <link href="<spring:url value="/css/styles.css"/>" rel="stylesheet" type="text/css" />
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script type="text/javascript" src="//netdna.bootstrapcdn.com/twitter-bootstrap/latest/js/bootstrap.min.js"></script>
 
 <script type="text/javascript" src="<spring:url value="/js/jquery.json-2.4.js"/>"></script>

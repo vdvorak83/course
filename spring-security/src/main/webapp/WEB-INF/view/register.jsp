@@ -8,9 +8,10 @@
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/latest/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="<spring:url value="/css/styles.css"/>" />
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script type="text/javascript" src="//netdna.bootstrapcdn.com/twitter-bootstrap/latest/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="<spring:url value="/js/jquery.json-2.4.js"/>"></script>
 
 <script type="text/javascript" src="<spring:url value="/js/internal/ajaxHandler.js"/>"></script>
 <script type="text/javascript" src="<spring:url value="/js/internal/common.js"/>"></script>
@@ -48,7 +49,7 @@
 
   <div class="container">
     <form id="registerForm" name="registerForm" action="" method="post" class="form-horizontal">
-    
+      
       <fieldset>
         <legend>Register</legend>
 
