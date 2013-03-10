@@ -23,15 +23,12 @@ public class User {
     @Column(unique = true, nullable = false)
     private String name;
 
-    @Column(unique = true, nullable = false)
-    private String uuid;
-
     @Column(nullable = false)
     private String password;
 
     @ManyToMany( /* cascade = { CascadeType.REMOVE }, */fetch = FetchType.EAGER)
-    @JoinTable(joinColumns = { @JoinColumn(name = "PRINCIPAL_ID", referencedColumnName = "PRINCIPAL_ID") }, inverseJoinColumns = { @JoinColumn(name = "ROLE_ID", referencedColumnName = "ROLE_ID") })
-    private Set<Authority> roles;
+    @JoinTable(joinColumns = { @JoinColumn(name = "PRINCIPAL_ID", referencedColumnName = "PRINCIPAL_ID") }, inverseJoinColumns = { @JoinColumn(name = "AUTHORITY_ID", referencedColumnName = "AUTHORITY_ID") })
+    private Set<Authority> authorities;
 
     private boolean suspended;
 
@@ -44,12 +41,11 @@ public class User {
 
         name = nameToSet;
         password = passwordToSet;
-        roles = rolesToSet;
+        authorities = rolesToSet;
     }
 
     public User(final String nameToSet, final String passwordToSet, final Set<Authority> rolesToSet, final String uuidToSet) {
         this(nameToSet, passwordToSet, rolesToSet);
-        uuid = uuidToSet;
     }
 
     // API
@@ -70,14 +66,6 @@ public class User {
         name = nameToSet;
     }
 
-    public String getUuid() {
-        return uuid;
-    }
-
-    public void setUuid(final String uuidToSet) {
-        uuid = uuidToSet;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -86,12 +74,12 @@ public class User {
         password = passwordToSet;
     }
 
-    public Set<Authority> getRoles() {
-        return roles;
+    public Set<Authority> getAuthorities() {
+        return authorities;
     }
 
-    public void setRoles(final Set<Authority> rolesToSet) {
-        roles = rolesToSet;
+    public void setAuthorities(final Set<Authority> authorities) {
+        this.authorities = authorities;
     }
 
     public boolean isSuspended() {
@@ -109,7 +97,6 @@ public class User {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((name == null) ? 0 : name.hashCode());
-        result = prime * result + ((uuid == null) ? 0 : uuid.hashCode());
         return result;
     }
 
@@ -126,11 +113,6 @@ public class User {
             if (other.name != null)
                 return false;
         } else if (!name.equals(other.name))
-            return false;
-        if (uuid == null) {
-            if (other.uuid != null)
-                return false;
-        } else if (!uuid.equals(other.uuid))
             return false;
         return true;
     }
