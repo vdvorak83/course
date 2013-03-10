@@ -15,7 +15,7 @@ import com.packt.springsecurity.backend.persistence.model.User;
 import com.packt.springsecurity.backend.persistence.service.IUserService;
 
 @Component
-public class SecUserService implements UserDetailsService {
+public class CustomUserService implements UserDetailsService {
 
     @Autowired
     private IUserService userService;

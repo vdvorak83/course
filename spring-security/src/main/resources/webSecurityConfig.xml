@@ -16,9 +16,7 @@
 	</http>
 
 	<authentication-manager>
-		<authentication-provider>
-			<jdbc-user-service data-source-ref="dataSource" />
-		</authentication-provider>
+		<authentication-provider user-service-ref="customUserService" />
 	</authentication-manager>
 
 </beans:beans>
