@@ -85,8 +85,6 @@ public class BackendPersistenceConfig {
         return new Properties() {
             {
                 setProperty("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
-                // setProperty("hibernate.globally_quoted_identifiers", "true");
-                // note: necessary in launchpad-storage, but causing problems here
             }
         };
     }

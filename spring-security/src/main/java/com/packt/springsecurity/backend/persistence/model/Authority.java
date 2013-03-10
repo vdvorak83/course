@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @Entity
-public class Role {
+public class Authority {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,11 +19,11 @@ public class Role {
     @Column(unique = true, nullable = false)
     private String name;
 
-    public Role() {
+    public Authority() {
         super();
     }
 
-    public Role(final String nameToSet) {
+    public Authority(final String nameToSet) {
         super();
         name = nameToSet;
     }
@@ -64,7 +64,7 @@ public class Role {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        final Role other = (Role) obj;
+        final Authority other = (Authority) obj;
         if (name == null) {
             if (other.name != null)
                 return false;

@@ -31,7 +31,7 @@ public class User {
 
     @ManyToMany( /* cascade = { CascadeType.REMOVE }, */fetch = FetchType.EAGER)
     @JoinTable(joinColumns = { @JoinColumn(name = "PRINCIPAL_ID", referencedColumnName = "PRINCIPAL_ID") }, inverseJoinColumns = { @JoinColumn(name = "ROLE_ID", referencedColumnName = "ROLE_ID") })
-    private Set<Role> roles;
+    private Set<Authority> roles;
 
     private boolean suspended;
 
@@ -39,7 +39,7 @@ public class User {
         super();
     }
 
-    public User(final String nameToSet, final String passwordToSet, final Set<Role> rolesToSet) {
+    public User(final String nameToSet, final String passwordToSet, final Set<Authority> rolesToSet) {
         super();
 
         name = nameToSet;
@@ -47,7 +47,7 @@ public class User {
         roles = rolesToSet;
     }
 
-    public User(final String nameToSet, final String passwordToSet, final Set<Role> rolesToSet, final String uuidToSet) {
+    public User(final String nameToSet, final String passwordToSet, final Set<Authority> rolesToSet, final String uuidToSet) {
         this(nameToSet, passwordToSet, rolesToSet);
         uuid = uuidToSet;
     }
@@ -86,11 +86,11 @@ public class User {
         password = passwordToSet;
     }
 
-    public Set<Role> getRoles() {
+    public Set<Authority> getRoles() {
         return roles;
     }
 
-    public void setRoles(final Set<Role> rolesToSet) {
+    public void setRoles(final Set<Authority> rolesToSet) {
         roles = rolesToSet;
     }
 
