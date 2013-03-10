@@ -15,12 +15,12 @@ import org.springframework.core.io.Resource;
 @Configuration
 @PropertySource({ "classpath:web-${clientWebTarget:dev}.properties", "classpath:ui.properties" })
 @ComponentScan("com.packt.springsecurity.frontend.common")
-public class ClientContextConfig {
+public class FrontendContextConfig {
 
     @Value("${clientWebTarget:dev}")
     String webTarget;
 
-    public ClientContextConfig() {
+    public FrontendContextConfig() {
         super();
     }
 

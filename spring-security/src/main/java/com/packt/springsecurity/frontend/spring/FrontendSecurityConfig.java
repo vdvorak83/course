@@ -5,9 +5,9 @@ import org.springframework.context.annotation.ImportResource;
 
 @Configuration
 @ImportResource({ "classpath*:webSecurityConfig.xml" })
-public class ClientSecurityConfig {
+public class FrontendSecurityConfig {
 
-    public ClientSecurityConfig() {
+    public FrontendSecurityConfig() {
         super();
     }
 

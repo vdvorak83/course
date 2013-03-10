@@ -34,6 +34,12 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.23</version>
+			<scope>runtime</scope>
+		</dependency>
 
 		<!-- Security -->
 
@@ -52,7 +58,7 @@
 			<artifactId>spring-security-taglibs</artifactId>
 			<version>${spring-security.version}</version>
 		</dependency>
-		
+
 		<!-- marshalling -->
 
 		<dependency>

@@ -17,11 +17,7 @@
 
 	<authentication-manager>
 		<authentication-provider>
-			<user-service>
-				<user name="user1" password="user1Pass" authorities="ROLE_USER" />
-				<user name="admin1" password="admin1Pass" authorities="ROLE_ADMIN,ROLE_USER" />
-				<user name="admin2" password="admin2Pass" authorities="ROLE_ADMIN,ROLE_USER" />
-			</user-service>
+			<jdbc-user-service data-source-ref="dataSource" />
 		</authentication-provider>
 	</authentication-manager>
 

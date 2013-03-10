@@ -13,9 +13,9 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 @Configuration
 @ComponentScan("com.packt.springsecurity.frontend.web")
-public class ClientWebConfig extends WebMvcConfigurerAdapter {
+public class FrontendWebConfig extends WebMvcConfigurerAdapter {
 
-    public ClientWebConfig() {
+    public FrontendWebConfig() {
         super();
     }
 
