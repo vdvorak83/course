@@ -28,7 +28,7 @@ public final class SecurityConstants {
 
     // API
 
-    public static Set<String> getAdminAuthorities() {
+    public static Set<String> getNamesOfAuthoritiesForAdmin() {
         return ImmutableSet.of(// @formatter:off
             Authorities.USER,
             Authorities.ADMIN
@@ -36,7 +36,7 @@ public final class SecurityConstants {
         // @formatter:on
     }
 
-    public static Set<String> getUserAuthorities() {
+    public static Set<String> getNamesOfAuthoritiesForUser() {
         return ImmutableSet.of(Authorities.USER);
     }
 

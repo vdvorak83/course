@@ -35,17 +35,18 @@ public class RegistrationController {
     @RequestMapping(value = "registration", method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.CREATED)
     public void registerUser(@RequestBody final RegistrationDto registration) {
-        final Set<Authority> userAuthorities = retrieveUserAuthorities();
-        userService.create(new User(registration.getUsername(), registration.getPassword(), userAuthorities));
+        final Set<String> authorityNamesForUser = SecurityConstants.getNamesOfAuthoritiesForUser();
+        final Set<Authority> authorityEntitiesForUser = retrieveAuthorityEntitiesForUser(authorityNamesForUser);
+
+        userService.create(new User(registration.getUsername(), registration.getPassword(), authorityEntitiesForUser));
     }
 
     // util
 
-    private final Set<Authority> retrieveUserAuthorities() {
+    private final Set<Authority> retrieveAuthorityEntitiesForUser(final Set<String> userAuthorityNames) {
         final Set<Authority> userAuthorities = Sets.newHashSet();
-        final Set<String> userAuthorityNames = SecurityConstants.getUserAuthorities();
-        for (String authorityName : userAuthorityNames) {
-            Authority authByName = authorityService.findByName(authorityName);
+        for (final String authorityName : userAuthorityNames) {
+            final Authority authByName = authorityService.findByName(authorityName);
             if (authByName != null) {
                 userAuthorities.add(authByName);
             }
