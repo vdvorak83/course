@@ -23,23 +23,19 @@ public class SecUserService implements UserDetailsService {
     @Autowired
     private IUserService userService;
 
-    public SecUserService() {
-        super();
-    }
-
     // API
 
     public UserDetails loadUserByUsername(final String username) throws UsernameNotFoundException {
         final User foundByUsername = userService.findByName(username);
         final Set<Authority> authorities = foundByUsername.getAuthorities();
-        final List<GrantedAuthority> authoritiesForSpring = convertAuthorityNamesIntoSpringAuthorities(authorities);
+        final List<GrantedAuthority> authoritiesForSpring = convertAuthorityEntieiesIntoSpringAuthorities(authorities);
 
         return new org.springframework.security.core.userdetails.User(username, foundByUsername.getPassword(), authoritiesForSpring);
     }
 
     // util
 
-    private final List<GrantedAuthority> convertAuthorityNamesIntoSpringAuthorities(final Set<Authority> authorities) {
+    private final List<GrantedAuthority> convertAuthorityEntieiesIntoSpringAuthorities(final Set<Authority> authorities) {
         final Iterable<String> authorityNames = Iterables.transform(authorities, Functions.toStringFunction());
         final String[] arrayOfAuthorityNames = Iterables.toArray(authorityNames, String.class);
         final List<GrantedAuthority> authoritiesForSpring = AuthorityUtils.createAuthorityList(arrayOfAuthorityNames);

@@ -17,7 +17,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "PRINCIPAL_ID")
+    @Column(name = "USER_ID")
     private Long id;
 
     @Column(unique = true, nullable = false)
@@ -26,11 +26,12 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @ManyToMany( /* cascade = { CascadeType.REMOVE }, */fetch = FetchType.EAGER)
-    @JoinTable(joinColumns = { @JoinColumn(name = "PRINCIPAL_ID", referencedColumnName = "PRINCIPAL_ID") }, inverseJoinColumns = { @JoinColumn(name = "AUTHORITY_ID", referencedColumnName = "AUTHORITY_ID") })
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(// @formatter:off
+        joinColumns =        { @JoinColumn(name = "USER_ID", referencedColumnName = "USER_ID") }, 
+        inverseJoinColumns = { @JoinColumn(name = "AUTHORITY_ID", referencedColumnName = "AUTHORITY_ID") }
+    ) // @formatter:on
     private Set<Authority> authorities;
-
-    private boolean suspended;
 
     public User() {
         super();
@@ -82,14 +83,6 @@ public class User {
         this.authorities = authorities;
     }
 
-    public boolean isSuspended() {
-        return suspended;
-    }
-
-    public void setSuspended(final boolean suspendedToSet) {
-        suspended = suspendedToSet;
-    }
-
     //
 
     @Override
@@ -101,14 +94,14 @@ public class User {
     }
 
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(final Object obj) {
         if (this == obj)
             return true;
         if (obj == null)
             return false;
         if (getClass() != obj.getClass())
             return false;
-        User other = (User) obj;
+        final User other = (User) obj;
         if (name == null) {
             if (other.name != null)
                 return false;
