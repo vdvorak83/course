@@ -13,7 +13,6 @@ function doRegistration() {
 
 function registrationSuccessHandler(msg, textStatus, xhr) {
 	if (xhr.status == 201) {
-		showInfoNotification("regSuccesMsg");
 		window.location.href = 'login.html?registered=true';
 	} else {
 		$('#registration_register').removeAttr("disabled");
@@ -24,9 +23,9 @@ function registrationFailedHandler(xhr) {
 	if (xhr.status == 409) {
 		var error = xhr.statusText;
 		if (error == "duplicate.email" || error == "DuplicateOrganization") {
-			showErrorNotification("regUserExistMsg");
+			window.alert("Error during registration" + error);
 		} else {
-			showErrorNotification("regFailedMsg" + error);
+			window.alert("Unknown error during registration" + error);
 		}
 	}
 	$('#registration_register').removeAttr("disabled");
