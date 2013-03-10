@@ -40,4 +40,12 @@ public final class SecurityConstants {
         return ImmutableSet.of(Authorities.USER);
     }
 
+    public static String[] getNamesOfAuthoritiesForAdminAsArray() {
+        return new String[] { Authorities.USER, Authorities.ADMIN };
+    }
+
+    public static String[] getNamesOfAuthoritiesForUserAsArray() {
+        return new String[] { Authorities.USER };
+    }
+
 }
