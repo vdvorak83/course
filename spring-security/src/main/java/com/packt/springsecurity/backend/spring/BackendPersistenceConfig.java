@@ -40,7 +40,7 @@ public class BackendPersistenceConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean() {
         final LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
         factoryBean.setDataSource(dataSource());
-        factoryBean.setPackagesToScan(new String[] { "com.launchpad.sec" });
+        factoryBean.setPackagesToScan(new String[] { "com.packt.springsecurity.backend.persistence.model" });
 
         final JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter() {
             {

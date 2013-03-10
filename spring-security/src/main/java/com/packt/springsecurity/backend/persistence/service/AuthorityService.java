@@ -1,12 +1,14 @@
 package com.packt.springsecurity.backend.persistence.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.packt.springsecurity.backend.persistence.dao.IAuthorityJpaDAO;
 import com.packt.springsecurity.backend.persistence.model.Authority;
 
 @Transactional
+@Service
 public class AuthorityService implements IAuthorityService {
 
     @Autowired
