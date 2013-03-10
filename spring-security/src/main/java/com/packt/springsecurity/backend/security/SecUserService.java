@@ -5,14 +5,11 @@ import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-import com.google.common.base.Functions;
-import com.google.common.collect.Iterables;
 import com.packt.springsecurity.backend.persistence.model.Authority;
 import com.packt.springsecurity.backend.persistence.model.User;
 import com.packt.springsecurity.backend.persistence.service.IUserService;
@@ -28,18 +25,9 @@ public class SecUserService implements UserDetailsService {
     public UserDetails loadUserByUsername(final String username) throws UsernameNotFoundException {
         final User foundByUsername = userService.findByName(username);
         final Set<Authority> authorities = foundByUsername.getAuthorities();
-        final List<GrantedAuthority> authoritiesForSpring = convertAuthorityEntieiesIntoSpringAuthorities(authorities);
+        final List<GrantedAuthority> authoritiesForSpring = SecurityUtil.convertAuthorityEntieiesIntoSpringAuthorities(authorities);
 
         return new org.springframework.security.core.userdetails.User(username, foundByUsername.getPassword(), authoritiesForSpring);
-    }
-
-    // util
-
-    private final List<GrantedAuthority> convertAuthorityEntieiesIntoSpringAuthorities(final Set<Authority> authorities) {
-        final Iterable<String> authorityNames = Iterables.transform(authorities, Functions.toStringFunction());
-        final String[] arrayOfAuthorityNames = Iterables.toArray(authorityNames, String.class);
-        final List<GrantedAuthority> authoritiesForSpring = AuthorityUtils.createAuthorityList(arrayOfAuthorityNames);
-        return authoritiesForSpring;
     }
 
 }
