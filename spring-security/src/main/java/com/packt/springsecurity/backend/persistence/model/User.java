@@ -1,4 +1,4 @@
-package com.packt.springsecurity.backend.model;
+package com.packt.springsecurity.backend.persistence.model;
 
 import java.util.Set;
 
@@ -11,10 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
-@XmlRootElement
 public class User {
 
     @Id

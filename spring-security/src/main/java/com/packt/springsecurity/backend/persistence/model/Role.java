@@ -1,16 +1,14 @@
-package com.packt.springsecurity.backend.model;
+package com.packt.springsecurity.backend.persistence.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.xml.bind.annotation.XmlRootElement;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @Entity
-@XmlRootElement
 public class Role {
 
     @Id

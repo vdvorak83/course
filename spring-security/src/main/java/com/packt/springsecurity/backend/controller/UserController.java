@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.google.common.collect.Lists;
-import com.packt.springsecurity.backend.model.User;
+import com.packt.springsecurity.backend.persistence.model.User;
 
 @Controller
 @RequestMapping(value = "users")
