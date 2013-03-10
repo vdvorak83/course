@@ -48,21 +48,31 @@
   </div>
 
   <div class="container">
-    <form id="registerForm" name="registerForm" action="" method="POST" class="form-horizontal">
+    <form id="registerForm" name="registerForm" action="" method="post" class="form-horizontal">
       
       <fieldset>
         <legend>Register</legend>
 
+        <div class="control-group">
           <label class="control-label" for="registration_username"><spring:message code="account.username" /></label>
-          <input id="registration_username" type="text" name="registration_username" class="required" />
-          <br/>
+          <div class="controls">
+            <input id="registration_username" type="text" name="username" class="required" />
+          </div>
+        </div>
 
+        <div class="control-group">
           <label class="control-label" for="registration_password"><spring:message code="account.password" /></label>
-          <input id="registration_password" type="password" name="registration_password" class="required" />
-          <p/>
-          
+          <div class="controls">
+            <input id="registration_password" type="password" name="password" class="required" />
+          </div>
+        </div>
+
+        <div class="control-group">
           <label class="control-label" for="registration_password2"><spring:message code="account.password.confirm" /></label>
-          <input id="registration_password2" type="password" name="registration_password2" class="required" />
+          <div class="controls">
+            <input id="registration_password2" type="password" name="registration_password2" class="required" />
+          </div>
+        </div>
 
         <div class="form-actions">
           <input id="registration_register" type="submit" class="btn btn-primary" value="<spring:message code="account.register"/>" />
