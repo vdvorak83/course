@@ -37,7 +37,6 @@ public class SecuritySetup implements ApplicationListener<ContextRefreshedEvent>
 
     //
 
-    @Override
     public final void onApplicationEvent(final ContextRefreshedEvent event) {
         if (!setupDone) {
             logger.info("Executing Setup");
@@ -68,8 +67,12 @@ public class SecuritySetup implements ApplicationListener<ContextRefreshedEvent>
     // Principal/User
 
     final void createUsers() {
+        final Authority authorityUser = authorityService.findByName("ROLE_USER");
         final Authority authorityAdmin = authorityService.findByName("ROLE_ADMIN");
-        createUserIfNotExisting(SecurityConstants.ADMIN_EMAIL, SecurityConstants.ADMIN_PASS, Sets.<Authority> newHashSet(authorityAdmin));
+
+        createUserIfNotExisting(SecurityConstants.ADMIN1_USERNAME, SecurityConstants.ADMIN1_PASS, Sets.<Authority> newHashSet(authorityUser, authorityAdmin));
+        createUserIfNotExisting(SecurityConstants.ADMIN2_USERNAME, SecurityConstants.ADMIN2_PASS, Sets.<Authority> newHashSet(authorityUser, authorityAdmin));
+        createUserIfNotExisting(SecurityConstants.USER1_USERNAME, SecurityConstants.USER1_PASS, Sets.<Authority> newHashSet(authorityUser));
     }
 
     final void createUserIfNotExisting(final String username, final String pass, final Set<Authority> authorities) {
