@@ -39,7 +39,6 @@
     <form name="loginForm" action="j_spring_security_check" method="post" class="form-horizontal">
       <fieldset>
         <legend>Please Login</legend>
-        <br />
 
         <div class="control-group">
           <label class="control-label" for="login_email"><spring:message code="login.username" /></label>
@@ -54,6 +53,13 @@
             <input type="password" name="j_password" class="required" />
           </div>
         </div>
+
+<!--         <div class="control-group"> -->
+<!--           <label class="control-label" for="remember">Remember Me?</label> -->
+<!--           <div class="controls"> -->
+<!--             <input type="checkbox" id="remember" name="_spring_security_remember_me" value="true" /> -->
+<!--           </div> -->
+<!--         </div> -->
 
         <div class="form-actions">
           <input type="submit" class="btn btn-primary" value="Login" />

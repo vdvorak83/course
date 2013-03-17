@@ -13,6 +13,8 @@
 		<form-login login-page="/login.html" default-target-url="/authenticated.html" authentication-failure-url="/login.html?error=true" />
 		<logout />
 
+<!-- 		<remember-me key="myAppKey" /> -->
+
 	</http>
 
 	<authentication-manager>
