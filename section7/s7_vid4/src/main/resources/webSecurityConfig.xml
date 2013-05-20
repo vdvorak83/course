@@ -10,8 +10,8 @@
 		<intercept-url pattern="/authenticated.html" access="hasRole('ROLE_READ_PAGES')" />
 		<intercept-url pattern="/admin/**" access="hasRole('ROLE_READ_PAGES')" />
 
-		<form-login login-page="/login.html" default-target-url="/authenticated.html" authentication-failure-url="/login.html?error=true" />
-		<logout logout-success-url="/login.html" />
+<!-- 		<form-login login-page="/login.html" default-target-url="/authenticated.html" authentication-failure-url="/login.html?error=true" /> -->
+<!-- 		<logout logout-success-url="/login.html" /> -->
 		<http-basic />
 
 	</http>
