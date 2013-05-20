@@ -21,8 +21,6 @@ import org.springframework.security.core.GrantedAuthority;
 @Entity
 @Table(name = "account")
 public class Account {
-    public static final Account ACCOUNT = new Account("anonymous");
-
     private Long id;
     private String username;
     private String firstName;
@@ -32,11 +30,14 @@ public class Account {
     private Set<Role> roles = new HashSet<Role>();
 
     public Account() {
+        super();
     }
 
-    public Account(String username) {
+    public Account(final String username) {
         this.username = username;
     }
+
+    // API
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -46,7 +47,7 @@ public class Account {
     }
 
     @SuppressWarnings("unused")
-    private void setId(Long id) {
+    private void setId(final Long id) {
         this.id = id;
     }
 
@@ -55,7 +56,7 @@ public class Account {
         return username;
     }
 
-    public void setUsername(String username) {
+    public void setUsername(final String username) {
         this.username = username;
     }
 
@@ -64,7 +65,7 @@ public class Account {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(final String firstName) {
         this.firstName = firstName;
     }
 
@@ -73,7 +74,7 @@ public class Account {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName(final String lastName) {
         this.lastName = lastName;
     }
 
@@ -87,7 +88,7 @@ public class Account {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(final String email) {
         this.email = email;
     }
 
@@ -96,23 +97,8 @@ public class Account {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(final String password) {
         this.password = password;
-    }
-
-    @Transient
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-    @Transient
-    public boolean isAccountNonLocked() {
-        return true;
-    }
-
-    @Transient
-    public boolean isCredentialsNonExpired() {
-        return true;
     }
 
     @ManyToMany(fetch = FetchType.EAGER)
@@ -121,14 +107,14 @@ public class Account {
         return roles;
     }
 
-    public void setRoles(Set<Role> roles) {
+    public void setRoles(final Set<Role> roles) {
         this.roles = roles;
     }
 
     @Transient
     public Set<Permission> getPermissions() {
-        Set<Permission> perms = new HashSet<Permission>();
-        for (Role role : roles) {
+        final Set<Permission> perms = new HashSet<Permission>();
+        for (final Role role : roles) {
             perms.addAll(role.getPermissions());
         }
         return perms;
@@ -139,7 +125,7 @@ public class Account {
      */
     @Transient
     public Collection<GrantedAuthority> getAuthorities() {
-        Set<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
+        final Set<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
         authorities.addAll(getRoles());
         authorities.addAll(getPermissions());
         return authorities;

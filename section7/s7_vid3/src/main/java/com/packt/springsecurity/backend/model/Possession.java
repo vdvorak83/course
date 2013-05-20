@@ -17,17 +17,15 @@ public class Possession {
     private Account owner;
 
     public Possession() {
+        super();
     }
 
-    public Possession(Long id) {
+    public Possession(final Long id) {
+        super();
         this.id = id;
     }
 
-    public Possession(Possession orig) {
-        this.id = orig.id;
-        this.name = orig.name;
-        this.owner = orig.owner;
-    }
+    // API
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -37,7 +35,7 @@ public class Possession {
     }
 
     @SuppressWarnings("unused")
-    private void setId(Long id) {
+    private void setId(final Long id) {
         this.id = id;
     }
 
@@ -46,7 +44,7 @@ public class Possession {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -56,7 +54,7 @@ public class Possession {
         return owner;
     }
 
-    public void setOwner(Account owner) {
+    public void setOwner(final Account owner) {
         this.owner = owner;
     }
 
