@@ -1,6 +1,7 @@
 package com.packt.springsecurity.backend.persistence.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,7 +27,7 @@ public class PossessionService implements IPossessionService {
         return dao.findByName(name);
     }
 
-    // @PostAuthorize("hasPermission(returnObject, 'read')")
+    @PostAuthorize("hasPermission(returnObject, 'read')")
     public Possession findById(final long id) {
         return dao.findOne(id);
     }

@@ -92,7 +92,6 @@ create table acl_entry (
     granting boolean not null default 1,
     audit_success boolean not null default 0,
     audit_failure boolean not null default 0,
-    unique index acl_entry_idx_1 (acl_object_identity, ace_order),
     foreign key (acl_object_identity) references acl_object_identity (id),
     foreign key (sid) references acl_sid (id)
 ) engine = InnoDb;
@@ -161,6 +160,25 @@ begin
         (@possession_class, $id, null, _owner_sid, 1);
     set _possession_oid := last_insert_id();
     
+    -- Give the owner read, write, create, delete and admin permissions by creating a possession ACL.
+    -- Bitwise permission mask semantics: read (bit 0), write (bit 1), create (bit 2), delete (bit 3), admin (bit 4).
+    insert into acl_entry (acl_object_identity, ace_order, sid, mask) values
+        (_possession_oid, 0, _owner_sid, 1), -- read
+        (_possession_oid, 1, _owner_sid, 2), -- write
+        (_possession_oid, 2, _owner_sid, 4), -- create
+        (_possession_oid, 3, _owner_sid, 8), -- delete
+        (_possession_oid, 4, _owner_sid, 16); -- admin
+end //
+
+create procedure givePermission($idOfPossession int, $owner_id int)
+begin
+    declare _owner_sid int;
+    declare _possession_oid smallint;
+    set _possession_oid := $idOfPossession();
+
+    -- Determine the id of the OID - for now, this is the same as the id of the Possession entity
+    select s.id from account a, acl_sid s where a.id = $owner_id and a.username = s.sid into _owner_sid;
+
     -- Give the owner read, write, create, delete and admin permissions by creating a possession ACL.
     -- Bitwise permission mask semantics: read (bit 0), write (bit 1), create (bit 2), delete (bit 3), admin (bit 4).
     insert into acl_entry (acl_object_identity, ace_order, sid, mask) values

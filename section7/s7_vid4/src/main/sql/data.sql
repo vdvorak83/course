@@ -26,3 +26,5 @@ call createPossession('Possession 3', @user2, @possession);
 call createPossession('Possession 4', @user3, @possession);
 call createPossession('Possession 5', @user3, @possession);
 call createPossession('Possession 6', @user3, @possession);
+
+-- call givePermission(1, @user2);
