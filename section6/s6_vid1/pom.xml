@@ -4,7 +4,7 @@
 Section 6 - Video 1</description>
 	<name>spring-security</name>
 
-	<groupId>com.packt</groupId>
+	<groupId>com.packt.s6</groupId>
 	<artifactId>spring-security</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
@@ -173,7 +173,7 @@ Section 6 - Video 1</description>
 			<version>${mockito.version}</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.jayway.restassured</groupId>
 			<artifactId>rest-assured</artifactId>

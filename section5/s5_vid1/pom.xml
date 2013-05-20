@@ -4,7 +4,7 @@
 Section 5 - Video 1</description>
 	<name>spring-security</name>
 
-	<groupId>com.packt</groupId>
+	<groupId>com.packt.s5</groupId>
 	<artifactId>spring-security</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
