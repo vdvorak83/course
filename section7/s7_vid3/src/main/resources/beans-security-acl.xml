@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:p="http://www.springframework.org/schema/p" xmlns:security="http://www.springframework.org/schema/security"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
 		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd"
 >
-
-
-	<!-- ================================================================== -->
-	<!-- ACL service -->
-	<!-- ================================================================== -->
-
+	
 	<bean id="aclCache" class="org.springframework.security.acls.domain.EhCacheBasedAclCache">
 		<constructor-arg>
 			<bean class="org.springframework.cache.ehcache.EhCacheFactoryBean" p:cacheName="aclCache">
@@ -34,14 +28,9 @@
 			<bean class="org.springframework.security.acls.domain.AclAuthorizationStrategyImpl">
 				<constructor-arg>
 					<list>
-						<!-- Role required to change ACL ownership -->
-						<ref local="adminRole" />
-
-						<!-- Role required to change auditing details -->
-						<ref local="adminRole" />
-
-						<!-- Role required to change other ACL/ACE details -->
-						<ref local="adminRole" />
+						<ref local="adminRole" /> <!-- Role required to change ACL ownership -->
+						<ref local="adminRole" /> <!-- Role required to change auditing details -->
+						<ref local="adminRole" /> <!-- Role required to change other ACL/ACE details -->
 					</list>
 				</constructor-arg>
 			</bean>
@@ -56,9 +45,7 @@
 		<constructor-arg ref="lookupStrategy" />
 		<constructor-arg ref="aclCache" />
 	</bean>
-
-	<bean id="auditLogger" class="org.springframework.security.acls.domain.ConsoleAuditLogger" />
-
+	
 	<!-- ================================================================== -->
 	<!-- Expression handler -->
 	<!-- ================================================================== -->
