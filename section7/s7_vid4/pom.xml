@@ -5,7 +5,7 @@ Section 7 - Video 4</description>
 	<name>spring-security</name>
 
 	<groupId>com.packt.s7</groupId>
-	<artifactId>spring-security-v4</artifactId>
+	<artifactId>spring-security.v4</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
