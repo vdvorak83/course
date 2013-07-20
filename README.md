@@ -31,12 +31,18 @@ mvn clean install
 ```
 
 
+
 ### Detailed Instructions
 
-[Eclipse: Setup and Configuration](https://github.com/eugenp/course/wiki/Eclipse%3A-setup-and-configuration)
+- [Eclipse: Setup and Configuration](https://github.com/eugenp/course/wiki/Eclipse%3A-setup-and-configuration)
+
 
 
 ### General References
 - [Spring Security Reference](http://static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity.html)
 - [Spring Security Reference (single page)](http://static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity-single.html)
-- [Spring Security **Samples**](https://github.com/SpringSource/spring-security/tree/master/samples)
+<br/><br/>
+
+- [Spring Security **Samples** reference](static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity-single.html#sample-apps)
+- [Spring Security **Samples** on `github`](https://github.com/SpringSource/spring-security/tree/master/samples)
+
