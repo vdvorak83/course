@@ -7,3 +7,4 @@
 - **Video 3** - `Authorization by URL`
 - **Video 4** - `Authorization Expressions`
 - **Video 5** - `In Page Authorization`
+

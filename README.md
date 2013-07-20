@@ -20,10 +20,17 @@
 
 
 ### Quick Start
+- clone the course: 
 ```
-git clone git://github.com/eugenp/course.git
-cd course
+https://github.com/eugenp/course.git
+```
+
+- build any of the modules/projects: 
+```
 mvn clean install
 ```
-- Home URL: `http://localhost:8080/`
 
+
+### Detailed Instructions
+
+[Eclipse: Setup and Configuration](https://github.com/eugenp/course/wiki/Eclipse%3A-setup-and-configuration)
