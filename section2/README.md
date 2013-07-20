@@ -17,3 +17,6 @@
 - [Authentication - the namespace - `jdbc-user-service`](http://static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity-single.html#nsa-jdbc-user-service)
 <br/><br/>
 - [Authentication - The `UserDetailsService`](http://static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity-single.html#tech-userdetailsservice)
+<br/><br/>
+- [**JPA** - Official Oracle Java EE 7 Tutorial](http://docs.oracle.com/javaee/7/tutorial/doc/partpersist.htm#BNBPY)
+- [**Hibernate** - Official Documentation](http://www.hibernate.org/docs)
