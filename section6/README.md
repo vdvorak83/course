@@ -9,6 +9,6 @@
 
 ## Section References
 - [Basic and Digest Authentication](http://static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity-single.html#basic)
-
+<br/><br/>
 - [Firefox RestClient](https://addons.mozilla.org/en-us/firefox/addon/restclient/)
 - [Chrome REST Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo)
