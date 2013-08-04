@@ -41,7 +41,7 @@ public class UserController {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
     @PreAuthorize("hasRole('ROLE_ADMIN') or principal.id == #userId")
-    public User findOneByIdAll(@PathVariable("id") final Long userId, final HttpServletRequest request, final UriComponentsBuilder uriBuilder, final HttpServletResponse response) {
+    public User findOneById(@PathVariable("id") final Long userId, final HttpServletRequest request, final UriComponentsBuilder uriBuilder, final HttpServletResponse response) {
         return service.findById(userId);
     }
 
