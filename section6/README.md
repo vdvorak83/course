@@ -12,3 +12,5 @@
 <br/><br/>
 - [Firefox RestClient](https://addons.mozilla.org/en-us/firefox/addon/restclient/)
 - [Chrome REST Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo)
+<br/><br/>
+- [Spring MVC Reference for the REST Service](http://static.springsource.org/spring/docs/3.2.x/spring-framework-reference/html/mvc.html)
