@@ -8,9 +8,10 @@
 
 
 ## Section References
-- [Expression-Based Access Control](http://static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity-single.html#el-access)
+- [List of Common Expressions](http://static.springsource.org/spring-security/site/docs/3.1.x/reference/el-access.html#el-common-built-in)
+- [Web Security Expressions](http://static.springsource.org/spring-security/site/docs/3.1.x/reference/el-access.html#el-access-web)
+- [Method Security Expressions](http://static.springsource.org/spring-security/site/docs/3.1.x/reference/el-access.html#d0e5600)
 
 
 ## Additional Notes
 - the [last project of this Section](https://github.com/eugenp/course/tree/master/section5/s5_vid3_done) is **the completed version** of the [Project for Video 3](https://github.com/eugenp/course/tree/master/section5/s5_vid3)
- 
