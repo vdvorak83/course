@@ -1,5 +1,7 @@
 package com.packt.springsecurity.backend.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +32,12 @@ public class PossessionController {
     @ResponseBody
     public Possession findOne(@PathVariable("id") final Long id, final UriComponentsBuilder uriBuilder, final HttpServletResponse response) {
         return service.findById(id);
+    }
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @ResponseBody
+    public List<Possession> findAll(final UriComponentsBuilder uriBuilder, final HttpServletResponse response) {
+        return service.findAll();
     }
 
 }

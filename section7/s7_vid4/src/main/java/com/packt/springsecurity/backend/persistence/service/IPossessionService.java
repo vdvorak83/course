@@ -1,5 +1,7 @@
 package com.packt.springsecurity.backend.persistence.service;
 
+import java.util.List;
+
 import com.packt.springsecurity.backend.model.Possession;
 
 public interface IPossessionService {
@@ -9,6 +11,8 @@ public interface IPossessionService {
     public Possession findByName(final String name);
 
     public Possession findById(final long id);
+
+    public List<Possession> findAll();
 
     // write
 
