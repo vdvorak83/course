@@ -1,10 +1,18 @@
 ==================
 
-# Spring Security 3.1 Course
+# [Spring Security 3.1 Course](http://www.packtpub.com/secure-your-web-applications-with-spring-security/video)
 
 ### Overview
-- 
+Throughout the Spring Security Video Course **you will**: 
+- Fully secure your web application with Spring Security
+- Implement authentication and registration with the database as well as with LDAP
+- Utilize authorization examples that help guide you through the authentication of users step-by-step
+- Learn with precise and practical examples for advanced security scenarios such as ACL, REST, and Remember Me
+- See how to integrate with your choice of technology and framework
 
+### How to ask questions / file bugs
+
+If you find any bug/issue in any of the projects of the course, or if you just want to ask a question, **please use [the github issue tracker](https://github.com/eugenp/course/issues)** (and provide some minimal detail). Thanks. 
 
 
 ### Course Structure
@@ -42,7 +50,6 @@ mvn clean install
 - [Spring Security Reference](http://static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity.html)
 - [Spring Security Reference (single page)](http://static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity-single.html)
 <br/><br/>
-
 - [Spring Security **Samples** reference](static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity-single.html#sample-apps)
 - [Spring Security **Samples** on `github`](https://github.com/SpringSource/spring-security/tree/master/samples)
 
