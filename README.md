@@ -53,3 +53,6 @@ mvn clean install
 - [Spring Security **Samples** reference](static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity-single.html#sample-apps)
 - [Spring Security **Samples** on `github`](https://github.com/SpringSource/spring-security/tree/master/samples)
 
+
+### Further Spring Security Learning
+If you enjoyed learning Spring Security throughout this course - head over to [baeldung.com](http://www.baeldung.com/tag/security/) and continue learning about this stuff.
