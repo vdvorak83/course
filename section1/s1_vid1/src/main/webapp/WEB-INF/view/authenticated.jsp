@@ -5,7 +5,7 @@
 <title>Index Page</title>
 <meta charset="UTF-8">
 
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/latest/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/latest/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link href="<spring:url value="/css/styles.css"/>" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
