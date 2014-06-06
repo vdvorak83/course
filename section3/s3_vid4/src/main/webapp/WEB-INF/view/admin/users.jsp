@@ -5,7 +5,7 @@
 <title><spring:message code="admin.console" /></title>
 <meta charset="UTF-8">
 
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/latest/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/latest/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link href="<spring:url value="/css/styles.css"/>" rel="stylesheet" type="text/css" />
 <link href="//ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
 
