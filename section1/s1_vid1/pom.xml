@@ -201,7 +201,7 @@ Section 1 - Video 1</description>
 		<jackson.version>2.1.2</jackson.version>
 
 		<!-- persistence -->
-		<hibernate.version>4.2.0.Final</hibernate.version>
+		<hibernate.version>5.3.18.Final</hibernate.version>
 
 		<!-- commons and utils -->
 		<commons-lang3.version>3.1</commons-lang3.version>
