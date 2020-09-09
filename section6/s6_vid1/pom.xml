@@ -64,7 +64,7 @@ Section 6 - Video 1</description>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.2.1.Final</version>
+			<version>5.3.18.Final</version>
 		</dependency>
 
 		<dependency>
@@ -103,7 +103,7 @@ Section 6 - Video 1</description>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>${hibernate.version}</version>
+			<version>5.3.18.Final</version>
 		</dependency>
 
 		<!-- common utilities -->
