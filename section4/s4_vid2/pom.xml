@@ -223,7 +223,7 @@ Section 4 - Video 2</description>
 
 		<!-- commons and utils -->
 		<commons-lang3.version>3.1</commons-lang3.version>
-		<guava.version>14.0.1</guava.version>
+		<guava.version>30.0-android</guava.version>
 
 		<!-- logging -->
 		<org.slf4j.version>1.7.5</org.slf4j.version>
