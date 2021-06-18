@@ -163,8 +163,8 @@
 	<properties>
 
 		<!-- Spring -->
-		<spring.version>3.2.0.RELEASE</spring.version>
-		<spring-security.version>3.1.3.RELEASE</spring-security.version>
+		<spring.version>3.2.1.RELEASE</spring.version>
+		<spring-security.version>4.0.1.RELEASE</spring-security.version>
 
 		<!-- marshalling -->
 		<jackson.version>2.1.2</jackson.version>
@@ -178,7 +178,7 @@
 
 		<!-- logging -->
 		<org.slf4j.version>1.7.2</org.slf4j.version>
-		<logback.version>1.0.9</logback.version>
+		<logback.version>1.2.0</logback.version>
 
 		<!-- testing -->
 		<junit.version>4.11</junit.version>
