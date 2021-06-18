@@ -68,7 +68,7 @@ Section 4 - Video 2</description>
 		<dependency>
 			<groupId>org.apache.directory.server</groupId>
 			<artifactId>apacheds-protocol-ldap</artifactId>
-			<version>1.5.5</version>
+			<version>1.5.6</version>
 			<scope>runtime</scope>
 		</dependency>
 
@@ -93,7 +93,7 @@ Section 4 - Video 2</description>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.24</version>
+			<version>8.0.16</version>
 			<scope>runtime</scope>
 		</dependency>
 
@@ -227,7 +227,7 @@ Section 4 - Video 2</description>
 
 		<!-- logging -->
 		<org.slf4j.version>1.7.5</org.slf4j.version>
-		<logback.version>1.0.11</logback.version>
+		<logback.version>1.1.11</logback.version>
 
 		<!-- testing -->
 		<junit.version>4.11</junit.version>
