@@ -108,7 +108,7 @@ Section 7 - Video 3</description>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.25</version>
+			<version>8.0.27</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
