@@ -70,7 +70,7 @@ Section 6 - Video 1</description>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.24</version>
+			<version>8.0.27</version>
 			<scope>runtime</scope>
 		</dependency>
 
