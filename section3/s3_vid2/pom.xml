@@ -208,7 +208,7 @@ Section 3 - Video 2</description>
 		<guava.version>14.0.1</guava.version>
 
 		<!-- logging -->
-		<org.slf4j.version>1.7.3</org.slf4j.version>
+		<org.slf4j.version>1.7.32</org.slf4j.version>
 		<logback.version>1.0.10</logback.version>
 
 		<!-- testing -->
