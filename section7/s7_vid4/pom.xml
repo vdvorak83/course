@@ -246,7 +246,7 @@ Section 7 - Video 4</description>
 	<properties>
 
 		<!-- Spring -->
-		<spring.version>3.2.1.RELEASE</spring.version>
+		<spring.version>5.2.20.RELEASE</spring.version>
 		<spring-security.version>3.1.4.RELEASE</spring-security.version>
 
 		<!-- marshalling -->
